@@ -9,21 +9,21 @@ largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001,
 */
 function largestOfFour(arr) {
   // initialize newArray to hold results of comparison
-  var newArray=[]
+  let newArray=[]
   //for loop with holder variable initialized at 0
   for(var i=0; i<arr.length; i++){
-    var holder = 0;
+    let holder = 0
     //second nested for loop to access the inner contents of each individual array in arr argument
-   for(var j=0; j<arr[i].length; j++){
+   for(let j=0; j<arr[i].length; j++){
      //if the value of the number at index [i][j] is greater than holder, holder is reassigned the value of that number
     if(arr[i][j]>holder){
-      holder = arr[i][j];
+      holder = arr[i][j]
     }
    }
    //having iterated all index positions in arr[i], exit the for loop and push value of holder to the new array
     newArray.push(holder)
   }
-  return newArray;
+  return newArray
 }
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
